@@ -1,5 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 
+
+
 const Dropdown = ({ options, selected, onSelectedChange,label}) => {
   const [open, setOpen] = useState(false);
   const ref = useRef();
@@ -18,10 +20,13 @@ const Dropdown = ({ options, selected, onSelectedChange,label}) => {
     }
   }, [])
 
+
   const renderedOptions = options.map((option) => {
     if (option.value === selected.value) {
       return null;
+    
     }
+    console.log(selected);
 
     return (
       <div
